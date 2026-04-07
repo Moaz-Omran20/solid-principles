@@ -1,10 +1,9 @@
-import 'package:solid_principles/Section%202%20_%20SRP/2.1/good/hash_password.dart';
-import 'package:solid_principles/Section%202%20_%20SRP/2.1/good/save_user_data.dart';
-import 'package:solid_principles/Section%202%20_%20SRP/2.1/good/user_creation_service.dart';
-import 'package:solid_principles/Section%202%20_%20SRP/2.1/good/user_logger.dart';
-
-import 'good/email_validation.dart';
-import 'good/user_model.dart';
+import 'good_practice/email_validation.dart';
+import 'good_practice/hash_password.dart';
+import 'good_practice/save_user_data.dart';
+import 'good_practice/user_creation_service.dart';
+import 'good_practice/user_logger.dart';
+import 'good_practice/user_model.dart';
 
 class UserManager {
   String name = '';

@@ -1,8 +1,8 @@
-import 'package:solid_principles/Section%202%20_%20SRP/2.1/good/email_validation.dart';
-import 'package:solid_principles/Section%202%20_%20SRP/2.1/good/save_user_data.dart';
-import 'package:solid_principles/Section%202%20_%20SRP/2.1/good/user_logger.dart';
-import 'package:solid_principles/Section%202%20_%20SRP/2.1/good/user_model.dart';
+import 'package:solid_principles/Section%202%20_%20SRP/2.1/good_practice/save_user_data.dart';
+import 'package:solid_principles/Section%202%20_%20SRP/2.1/good_practice/user_logger.dart';
+import 'package:solid_principles/Section%202%20_%20SRP/2.1/good_practice/user_model.dart';
 
+import 'email_validation.dart';
 import 'hash_password.dart';
 
 class UserCreationService {

@@ -1,4 +1,4 @@
-import 'package:solid_principles/Section%202%20_%20SRP/2.1/good/user_model.dart';
+import 'package:solid_principles/Section%202%20_%20SRP/2.1/good_practice/user_model.dart';
 
 class UserLogger {
 
