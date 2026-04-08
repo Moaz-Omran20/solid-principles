@@ -34,14 +34,14 @@ class OrderManager {
 }
 
 void main() {
-  final manager = OrderManager();
-  final order = Order(id: 'ORD-001', total: 100.0, items: ['Item1']);
-
-  // One class doing everything - messy!
-  if (manager.isValidOrder(order)) {
-    final tax = manager.calculateTax(92.59);
-    manager.saveOrder(order);
-    manager.sendConfirmationEmail(order);
-    manager.generateInvoice(order);
-  }
+  // final manager = OrderManager();
+  // final order = Order(id: 'ORD-001', total: 100.0, items: ['Item1']);
+  //
+  // // One class doing everything - messy!
+  // if (manager.isValidOrder(order)) {
+  //   final tax = manager.calculateTax(92.59);
+  //   manager.saveOrder(order);
+  //   manager.sendConfirmationEmail(order);
+  //   manager.generateInvoice(order);
+  // }
 }
