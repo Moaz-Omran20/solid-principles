@@ -1,3 +1,10 @@
+import 'package:solid_principles/Section%202%20_%20SRP/2.2/good_practice/calculate_tax.dart';
+import 'package:solid_principles/Section%202%20_%20SRP/2.2/good_practice/generate_invoice.dart';
+import 'package:solid_principles/Section%202%20_%20SRP/2.2/good_practice/order_service.dart';
+import 'package:solid_principles/Section%202%20_%20SRP/2.2/good_practice/order_validation.dart';
+import 'package:solid_principles/Section%202%20_%20SRP/2.2/good_practice/save_order.dart';
+import 'package:solid_principles/Section%202%20_%20SRP/2.2/good_practice/send_config_email.dart';
+
 class Order {
   String id;
   double total;
@@ -44,4 +51,12 @@ void main() {
   //   manager.sendConfirmationEmail(order);
   //   manager.generateInvoice(order);
   // }
+  OrderService order = OrderService(
+    CalculateTax(),
+    GenerateInvoice(),
+    OrderValidation(),
+    SaveOrder(),
+    SendConfigEmail(),
+  );
+  order.processOrder(Order(id: 'ORD-001', total:12, items: ['Item1']));
 }
