@@ -40,3 +40,8 @@ States that software entities should be open for extension but closed for modifi
 This means you should be able to add new functionality without changing existing code, reducing the risk of breaking what already works. It’s typically achieved through abstraction, such as interfaces or inheritance.
 
 Applying OCP makes your code more flexible, scalable, and easier to maintain.
+
+<p align="center"> <img src="drawables/ocp.png" width="40%" /> </p>
+
+--------------------------------------------------
+
