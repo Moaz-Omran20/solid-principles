@@ -1,3 +1,10 @@
+import 'package:solid_principles/Section%203%20_%20OCP/3.1/good_practice/report_service.dart';
+
+import 'good_practice/type/excel_generator.dart';
+import 'good_practice/type/html_type.dart';
+import 'good_practice/type/json_generator.dart';
+import 'good_practice/type/pdf_generator.dart';
+
 class ReportData {
   final String title;
   final List<String> items;
@@ -55,10 +62,21 @@ void main() {
     generatedAt: DateTime.now(),
   );
 
-  final generator = ReportGeneratorBad();
+  // final generator = ReportGeneratorBad();
+  //
+  // print(generator.generate(data, 'PDF'));
+  // print(generator.generate(data, 'HTML'));
+  // print(generator.generate(data, 'EXCEL'));
+  // print(generator.generate(data, 'JSON'));
 
-  print(generator.generate(data, 'PDF'));
-  print(generator.generate(data, 'HTML'));
-  print(generator.generate(data, 'EXCEL'));
-  print(generator.generate(data, 'JSON'));
+  //--------------------good use -------------------
+
+  ReportService reportService = ReportService([
+    PdfGenerator(),
+    HtmlType(),
+    ExcelGenerator(),
+    JsonGenerator(),
+  ]);
+  String fileGenerator = reportService.generateReport(data, 'HTML');
+  print(fileGenerator);
 }
