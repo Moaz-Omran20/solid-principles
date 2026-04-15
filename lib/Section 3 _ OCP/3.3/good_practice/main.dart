@@ -7,7 +7,12 @@ import 'types/pdf_document_processor.dart';
 void main()
 {
 
-  final DocumentProcessor pdfProcessor = PdfDocumentProcessor();
+  final PdfDocumentProcessor  pdfProcessor = PdfDocumentProcessor();
+  pdfProcessor.enableCompression();
+  pdfProcessor.process('doc.pdf', 'Hello PDF');
+
+  print("---------------------------------------------");
+
   final DocumentProcessor wordProcessor = WordDocumentProcessor();
   final DocumentProcessor mdProcessor = MarkDownDocumentProcessor();
 
