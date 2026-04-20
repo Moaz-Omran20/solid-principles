@@ -1,8 +1,8 @@
-abstract class PaymentMethod {
+abstract class PaymentMethodBad {
   String accountNumber;
   String holderName;
 
-  PaymentMethod({required this.accountNumber, required this.holderName});
+  PaymentMethodBad({required this.accountNumber, required this.holderName});
 
   bool processRefund(double amount) {
     print('Processing refund of \$$amount to $holderName');
@@ -16,11 +16,11 @@ abstract class PaymentMethod {
   }
 }
 
-class CreditCard extends PaymentMethod {
+class CreditCardBad extends PaymentMethodBad {
   String cvv;
   String expiryDate;
 
-  CreditCard({
+  CreditCardBad({
     required super.accountNumber,
     required super.holderName,
     required this.cvv,
@@ -44,11 +44,11 @@ class CreditCard extends PaymentMethod {
   }
 }
 
-class BankAccount extends PaymentMethod {
+class BankAccountBad extends PaymentMethodBad {
   String bankName;
   String routingNumber;
 
-  BankAccount({
+  BankAccountBad({
     required super.accountNumber,
     required super.holderName,
     required this.bankName,
@@ -70,10 +70,10 @@ class BankAccount extends PaymentMethod {
   }
 }
 
-class GiftCard extends PaymentMethod {
+class GiftCardBad extends PaymentMethodBad {
   double balance;
 
-  GiftCard({required String cardNumber, required this.balance})
+  GiftCardBad({required String cardNumber, required this.balance})
     : super(accountNumber: cardNumber, holderName: 'Gift Card');
 
   @override
@@ -100,27 +100,27 @@ class GiftCard extends PaymentMethod {
   }
 }
 
-void processReturn(PaymentMethod paymentMethod, double amount) {
+void processReturn(PaymentMethodBad paymentMethod, double amount) {
   print('\n--- Processing return of \$$amount ---');
   paymentMethod.processRefund(amount);
 }
 
 void main() {
-  final creditCard = CreditCard(
+  final creditCard = CreditCardBad(
     accountNumber: '4532123456789012',
     holderName: 'John Doe',
     cvv: '123',
     expiryDate: '12/25',
   );
 
-  final bankAccount = BankAccount(
+  final bankAccount = BankAccountBad(
     accountNumber: '123456789',
     holderName: 'Jane Smith',
     bankName: 'ABC Bank',
     routingNumber: '987654321',
   );
 
-  final giftCard = GiftCard(cardNumber: 'GIFT-5000', balance: 50.0);
+  final giftCard = GiftCardBad(cardNumber: 'GIFT-5000', balance: 50.0);
 
 
 
@@ -135,8 +135,8 @@ void main() {
     print('💥 Error: $e');
   }
 
-  void safeProcessReturn(PaymentMethod payment, double amount) {
-    if (payment is GiftCard) {
+  void safeProcessReturn(PaymentMethodBad payment, double amount) {
+    if (payment is GiftCardBad) {
       print('Cannot refund to gift card - reloading instead');
       payment.reload(amount);
     } else {
