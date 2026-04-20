@@ -29,9 +29,4 @@ class GiftCard implements ReloadablePayment {
     print('Gift card reloaded with \$$amount. New balance: \$$balance');
   }
 
-  @override
-  bool processRefund(double amount) {
-    // TODO: implement processRefund
-    throw UnimplementedError();
-  }
 }
