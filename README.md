@@ -45,3 +45,14 @@ Applying OCP makes your code more flexible, scalable, and easier to maintain.
 
 --------------------------------------------------
 
+# Liskov Substitution Principle (LSP)
+
+The Liskov Substitution Principle, introduced by Barbara Liskov, states that objects of a subclass should be replaceable with objects of their superclass without affecting the correctness of the program.
+
+In other words, a subclass must honor the behavior and expectations of its parent class. It should not alter expected functionality, throw unexpected errors, or require stricter conditions.
+
+Adhering to LSP helps ensure reliable inheritance, improves code maintainability, and prevents subtle bugs caused by improper subclass behavior.
+
+<p align="center"> <img src="drawables/LSP.png" width="40%" /> </p>
+
+-------------------------------------------------------
