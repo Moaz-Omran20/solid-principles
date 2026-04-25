@@ -56,3 +56,14 @@ Adhering to LSP helps ensure reliable inheritance, improves code maintainability
 <p align="center"> <img src="drawables/LSP.png" width="40%" /> </p>
 
 -------------------------------------------------------
+
+# Interface Segregation Principle (ISP)
+
+Clients should not be forced to depend on methods they do not use.
+
+Description:
+The Interface Segregation Principle states that instead of creating large, general-purpose interfaces, it’s better to split them into smaller, more specific ones. This ensures that classes only implement the methods they actually need, reducing unnecessary dependencies and improving maintainability.
+
+<p align="center"> <img src="drawables/ISP.png" width="40%" /> </p>
+
+--------------------------------------------------------
