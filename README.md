@@ -64,6 +64,11 @@ Clients should not be forced to depend on methods they do not use.
 Description:
 The Interface Segregation Principle states that instead of creating large, general-purpose interfaces, it’s better to split them into smaller, more specific ones. This ensures that classes only implement the methods they actually need, reducing unnecessary dependencies and improving maintainability.
 
-<p align="center"> <img src="drawables/ISP.png" width="40%" /> </p>
+<p align="center"> <img src="drawables/DIP.png" width="40%" /> </p>
 
 --------------------------------------------------------
+# Dependency Inversion Principle (DIP)
+
+The Dependency Inversion Principle states that high-level modules should not depend on low-level modules directly. Instead, both should depend on abstractions such as interfaces or abstract classes. This reduces coupling, improves flexibility, and makes the code easier to test, maintain, and extend.
+
+<p align="center"> <img src="drawables/ISP.png" width="40%" /> </p>
